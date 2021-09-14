@@ -12,16 +12,7 @@
 
     <body style="margin: 0; overflow: hidden;">
 	    
-	    	    <div class= "popup" id= "popup-1">
-    	<div class="overlay">  </div>
-    	<div class="content">
-      <div class="close-btn" onclick="closePopUp()" >&times;</div>
-      <h1>Corredor de arte urbano</h1>
-	<p style="font-size:14px">La Municipalidad de Córdoba, a través de la Subsecretaría de Cultura y de la mano con artistas de nuestra ciudad, se encargó de la realización de intervenciones artísticas de género muralista en la costanera dando luz a  un nuevo ‘corredor de arte urbano a cielo abierto’. Las obras, enmarcadas en el programa “Arte de Nuestra Gente”, se hicieron de manera progresiva y han completado 4.500 m2 de arte visual para nuestra comunidad.</p> 
-
-    </div>
-   </div>
-	    
+	    	   	    
         <a-scene
             embedded
             loading-screen="enabled: false;"
@@ -29,17 +20,19 @@
         >
 		
 		<a-image
+			 alert = "true"
 			 src="Assets/Asset1.png"
-                    scale="13 13 13"
+                    scale="30 30 30"
 		    rotation="0 0 0"
-		    gps-entity-place="latitude: -37.462758490988975; longitude: -61.925440963078955;"
-			 simulateAltitude = "40"
+			 look-at="[gps-camera]"
+		    gps-entity-place="latitude: -37.46270808642254; longitude: -61.92557732675156;"
+			 simulateAltitude = "400"
 			maxDistance="100"
                 ></a-image>
 				
 				
 
-		<a-camera id='camera1' look-controls-enabled='true' arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 20' rotation-reader> </a-camera>
+		<a-camera id='camera1' look-controls-enabled='true' arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 10' rotation-reader> </a-camera>
         </a-scene>
     </body>
 </html>
